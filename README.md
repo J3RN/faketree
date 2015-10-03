@@ -1,8 +1,8 @@
-# Faketree
+# FakeTree
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/faketree`. To experiment with that code, run `bin/console` for an interactive prompt.
+https://travis-ci.org/J3RN/faketree.svg?branch=master
 
-TODO: Delete this and the text above, and describe your gem
+This is a gem used to create a fake filesystem to test your gem or application in. Under the hood, it uses [FakeFS](https://github.com/defunkt/fakefs) to stub out the filesystem requests.
 
 ## Installation
 
@@ -22,7 +22,35 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First, you have to create a layout of the fake filesystem in YAML:
+
+```YAML
+# spec/support/faketree.yml
+
+Gemfile: |
+  ruby '2.2.0'
+
+  gem 'rails'
+app:
+  models:
+    user.rb: |
+      class User
+...
+```
+
+Usage is simple. To load your faked out filesystem:
+
+```ruby
+FakeTree.start! 'path_to_yaml' # You can put your YAML layout anywhere!
+```
+
+To stop faking out the file system:
+
+```ruby
+FakeTree.stop!
+```
+
+That's all there is to it!
 
 ## Development
 
