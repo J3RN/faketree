@@ -22,7 +22,6 @@ describe FakeTree::Runner do
       it 'populates the contents of the file' do
         expect(File.read 'a').to eq('Lorem ipsum set amet')
       end
-
     end
 
     context 'with a directory' do
