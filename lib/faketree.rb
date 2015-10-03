@@ -1,3 +1,5 @@
 require 'faketree/version'
+require 'yaml'
+require 'fakefs/safe'
 require 'faketree/base'
 require 'faketree/runner'
