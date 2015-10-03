@@ -1,0 +1,5 @@
+Style/Documentation:
+  Exclude:
+    - 'lib/faketree/base.rb'
+    - 'lib/faketree/runner.rb'
+    - 'lib/faketree/version.rb'
