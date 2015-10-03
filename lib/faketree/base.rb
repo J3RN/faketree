@@ -1,11 +1,9 @@
-require 'fakefs/safe'
-
 module FakeTree
   def self.start!(path_to_yaml)
-    FakeFS.activate!
+    tree_hash = YAML.load(File.read(path_to_yaml))
 
-    tree_hash = Yaml.load(File.read(path_to_yaml))
-    FakeTree::Runner.new.fake(tree_hash)
+    FakeFS.activate!
+    FakeTree::Runner.new.start(tree_hash)
   end
 
   def self.stop!
