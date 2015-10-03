@@ -1,6 +1,4 @@
-# FakeTree
-
-![CI badge](https://travis-ci.org/J3RN/faketree.svg?branch=master)
+# FakeTree ![CI badge](https://travis-ci.org/J3RN/faketree.svg?branch=master)
 
 This is a gem used to create a fake filesystem to test your gem or application in. Under the hood, it uses [FakeFS](https://github.com/defunkt/fakefs) to stub out the filesystem requests.
 
