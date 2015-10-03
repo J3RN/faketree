@@ -5,7 +5,7 @@ require 'faketree/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'faketree'
-  spec.version       = Faketree::VERSION
+  spec.version       = FakeTree::VERSION
   spec.authors       = ['Jonathan Arnett']
   spec.email         = ['jonarnett90@gmail.com']
 

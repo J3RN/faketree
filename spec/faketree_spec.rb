@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Faketree do
+describe FakeTree do
   it 'has a version number' do
-    expect(Faketree::VERSION).not_to be nil
+    expect(FakeTree::VERSION).not_to be nil
   end
 end
