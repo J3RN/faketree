@@ -1,5 +1,3 @@
-require "faketree/version"
-
-module Faketree
-  # Your code goes here...
-end
+require 'faketree/version'
+require 'faketree/base'
+require 'faketree/runner'
